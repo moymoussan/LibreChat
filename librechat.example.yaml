@@ -94,7 +94,7 @@ registration:
 endpoints:
   azureOpenAI:
     titleModel: "gpt-4o"
-    plugins: false
+    plugins: true
     groups:
       - group: "azure-oai-group" # arbitrary name
         apiKey: "${AZURE_OPENAI_KEY}"
@@ -109,11 +109,11 @@ endpoints:
             version: "2024-02-15-preview"
           gpt-4o-mini:
             deploymentName: gpt-4o-mini
-   assistants:
-     disableBuilder: false # Disable Assistants Builder Interface by setting to `true`
-     pollIntervalMs: 3000  # Polling interval for checking assistant updates
-     timeoutMs: 180000  # Timeout for assistant operations
-     excludedIds: [""]
+   #assistants:
+     #disableBuilder: false # Disable Assistants Builder Interface by setting to `true`
+     #pollIntervalMs: 3000  # Polling interval for checking assistant updates
+     #timeoutMs: 180000  # Timeout for assistant operations
+     #excludedIds: [""]
   #   # Should only be one or the other, either `supportedIds` or `excludedIds`
   #   supportedIds: ["asst_supportedAssistantId1", "asst_supportedAssistantId2"] 
   #   Only show assistants that the user created or that were created externally (e.g. in Assistants playground).
