@@ -109,15 +109,15 @@ endpoints:
             version: "2024-02-15-preview"
           gpt-4o-mini:
             deploymentName: gpt-4o-mini
-   #assistants:
-    # disableBuilder: false # Disable Assistants Builder Interface by setting to `true`
-   #  pollIntervalMs: 3000  # Polling interval for checking assistant updates
-    # timeoutMs: 180000  # Timeout for assistant operations
+   assistants:
+     disableBuilder: false # Disable Assistants Builder Interface by setting to `true`
+     pollIntervalMs: 3000  # Polling interval for checking assistant updates
+     timeoutMs: 180000  # Timeout for assistant operations
+     excludedIds: [""]
   #   # Should only be one or the other, either `supportedIds` or `excludedIds`
-  #   supportedIds: ["asst_supportedAssistantId1", "asst_supportedAssistantId2"]
-    #  excludedIds: [""]
+  #   supportedIds: ["asst_supportedAssistantId1", "asst_supportedAssistantId2"] 
   #   Only show assistants that the user created or that were created externally (e.g. in Assistants playground).
-   #   privateAssistants: false # Does not work with `supportedIds` or `excludedIds`
+  #   privateAssistants: false # Does not work with `supportedIds` or `excludedIds`
   #   # (optional) Models that support retrieval, will default to latest known OpenAI models that support the feature
   #   retrievalModels: ["gpt-4-turbo-preview"]
   #   # (optional) Assistant Capabilities available to all users. Omit the ones you wish to exclude. Defaults to list below.
