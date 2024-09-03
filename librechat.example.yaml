@@ -94,7 +94,7 @@ registration:
 endpoints:
   azureOpenAI:
     titleModel: "gpt-4o"
-    plugins: true
+    plugins: false
     groups:
       - group: "azure-oai-group" # arbitrary name
         apiKey: "${AZURE_OPENAI_KEY}"
