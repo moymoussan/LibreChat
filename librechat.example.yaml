@@ -200,22 +200,39 @@ endpoints:
       # Drop Default params parameters from the request. See default params in guide linked below.
       # NOTE: For Mistral, it is necessary to drop the following parameters or you will encounter a 422 Error:
       dropParams: ['stop', 'user', 'frequency_penalty', 'presence_penalty']
-
+  #perplexity
+    - name: "Perplexity"
+      apiKey: "${PERPLEXITY_API_KEY}"
+      baseURL: "https://api.perplexity.ai/"
+      models:
+        default: [
+          "llama-3.1-sonar-small-128k-online",
+          "llama-3.1-sonar-large-128k-online",
+          "llama-3.1-sonar-huge-128k-online"
+          ]
+        fetch: false # fetching list of models is not supported
+      titleConvo: true
+      titleModel: "llama-3.1-sonar-small-128k-chat"
+      summarize: false
+      summaryModel: "llama-3.1-sonar-small-128k-chat"
+      forcePrompt: false
+      dropParams: ["stop", "frequency_penalty"]
+      modelDisplayLabel: "Perplexity"
     # OpenRouter Example
-    - name: 'OpenRouter'
+   # - name: 'OpenRouter'
       # For `apiKey` and `baseURL`, you can use environment variables that you define.
       # recommended environment variables:
       # Known issue: you should not use `OPENROUTER_API_KEY` as it will then override the `openAI` endpoint to use OpenRouter as well.
-      apiKey: '${OPENROUTER_KEY}'
-      baseURL: 'https://openrouter.ai/api/v1'
-      models:
-        default: ['meta-llama/llama-3-70b-instruct']
-        fetch: true
-      titleConvo: true
-      titleModel: 'meta-llama/llama-3-70b-instruct'
+   #   apiKey: '${OPENROUTER_KEY}'
+    #  baseURL: 'https://openrouter.ai/api/v1'
+    #  models:
+    #    default: ['meta-llama/llama-3-70b-instruct']
+    #    fetch: true
+    #  titleConvo: true
+    #  titleModel: 'meta-llama/llama-3-70b-instruct'
       # Recommended: Drop the stop parameter from the request as Openrouter models use a variety of stop tokens.
-      dropParams: ['stop']
-      modelDisplayLabel: 'OpenRouter'
+     # dropParams: ['stop']
+      #modelDisplayLabel: 'OpenRouter'
 # fileConfig:
 #   endpoints:
 #     assistants:
