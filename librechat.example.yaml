@@ -109,7 +109,7 @@ endpoints:
             version: "2024-02-15-preview"
           gpt-4o-mini:
             deploymentName: gpt-4o-mini
-  # assistants:
+   assistants:
   #   disableBuilder: false # Disable Assistants Builder Interface by setting to `true`
   #   pollIntervalMs: 3000  # Polling interval for checking assistant updates
   #   timeoutMs: 180000  # Timeout for assistant operations
