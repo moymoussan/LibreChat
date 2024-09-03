@@ -100,7 +100,7 @@ endpoints:
         apiKey: "${AZURE_OPENAI_KEY}"
         instanceName: "azureopenaisponsoreastus" # name of the resource group or instance
         version: "2024-02-15-preview"
-        # baseURL: https://azureopenaisponsoreastus.openai.azure.com/
+        baseURL: https://azureopenaisponsoreastus.openai.azure.com/
         # additionalHeaders:
         #   X-Custom-Header: value
         models:
