@@ -92,6 +92,23 @@ registration:
 
 # Definition of custom endpoints
 endpoints:
+  azureOpenAI:
+    titleModel: "gpt-4o"
+    plugins: false
+    groups:
+      - group: "azure-oai-group" # arbitrary name
+        apiKey: "${AZURE_API_KEY}"
+        instanceName: "azureopenaisponsoreastus" # name of the resource group or instance
+        version: "2023-12-01-preview"
+        baseURL: https://azureopenaisponsoreastus.openai.azure.com/
+        # additionalHeaders:
+        #   X-Custom-Header: value
+        models:
+          gpt-4o:
+            deploymentName: gpt-4o
+            version: "2024-02-15-preview"
+          gpt-4o-mini:
+            deploymentName: gpt-4o-mini
   # assistants:
   #   disableBuilder: false # Disable Assistants Builder Interface by setting to `true`
   #   pollIntervalMs: 3000  # Polling interval for checking assistant updates
