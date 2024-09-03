@@ -98,7 +98,7 @@ endpoints:
     groups:
       - group: "azure-oai-group" # arbitrary name
         apiKey: "${AZURE_OPENAI_KEY}"
-       # instanceName: "azureopenaisponsoreastus" # name of the resource group or instance
+        instanceName: "azureopenaisponsoreastus" # name of the resource group or instance
         version: "2024-02-15-preview"
         baseURL: https://azureopenaisponsoreastus.openai.azure.com/
         # additionalHeaders:
